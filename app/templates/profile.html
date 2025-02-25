@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block css %}
+<link rel="stylesheet" href="/static/css/profile.css" />
+{% endblock %} {% block main %}
+<div class="profile-container">
+    <div class="avatar-container bg-primary">
+        <img
+            src="{{ url_for('static', filename='images/user-avatar.png')}}"
+            width="128"
+            height="128"
+            class="profile-avatar"
+            alt="Profile"
+        />
+        <h3>Ajani Green</h3>
+        <p>@agreen</p>
+        <p>Kingston, Jamaica</p>
+        <p>Joined {{ format_date_joined() }}</p>
+    </div>
+    <div class="info-container">
+        <p class="short-bio">
+            I am a full-stack developer born and raised in Jamaica. I enjoy
+            working with tech and learning about the tech-world.
+        </p>
+        <div class="stats-container">
+            <div class="stat">
+                <h3>7</h3>
+                <p>Posts</p>
+            </div>
+            <div class="stat">
+                <h3>100</h3>
+                <p>Following</p>
+            </div>
+            <div class="stat">
+                <h3>250</h3>
+                <p>Followers</p>
+            </div>
+        </div>
+        <button class="btn btn-primary">Follow</button>
+    </div>
+</div>
+
+{% endblock %}
